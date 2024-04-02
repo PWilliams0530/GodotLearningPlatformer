@@ -1,0 +1,8 @@
+res://main.tscn
+res://world.tscn
+res://bg.tscn
+res://bg.gd
+res://Player/Player.tscn
+res://Frog.tscn
+res://Frog.gd
+res://Player/Player.gd
