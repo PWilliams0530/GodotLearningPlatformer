@@ -1,0 +1,57 @@
+[gd_scene load_steps=11 format=3 uid="uid://ct4omid67iycx"]
+
+[ext_resource type="Script" path="res://Collectables/Cherry.gd" id="1_8nybi"]
+[ext_resource type="Texture2D" uid="uid://bsybsndjf6k87" path="res://Sunny Land Collection Files/Packs/Sunnyland/sprites/cherry/cherry-1.png" id="1_px3ye"]
+[ext_resource type="Texture2D" uid="uid://db8g3scxgv5up" path="res://Sunny Land Collection Files/Packs/Sunnyland/sprites/cherry/cherry-2.png" id="2_j4exg"]
+[ext_resource type="Texture2D" uid="uid://bb6uqoumpw5ix" path="res://Sunny Land Collection Files/Packs/Sunnyland/sprites/cherry/cherry-3.png" id="3_qwaa0"]
+[ext_resource type="Texture2D" uid="uid://cqtje7lrta3y" path="res://Sunny Land Collection Files/Packs/Sunnyland/sprites/cherry/cherry-4.png" id="4_a5ood"]
+[ext_resource type="Texture2D" uid="uid://b4vcdk2bqevop" path="res://Sunny Land Collection Files/Packs/Sunnyland/sprites/cherry/cherry-5.png" id="5_i7cny"]
+[ext_resource type="Texture2D" uid="uid://c7ugqs1erlevx" path="res://Sunny Land Collection Files/Packs/Sunnyland/sprites/cherry/cherry-6.png" id="6_2nwqi"]
+[ext_resource type="Texture2D" uid="uid://cdh381nba7ghy" path="res://Sunny Land Collection Files/Packs/Sunnyland/sprites/cherry/cherry-7.png" id="7_xcwqn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f771h"]
+radius = 24.5153
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k0n17"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_px3ye")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_j4exg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qwaa0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_a5ood")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_i7cny")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2nwqi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xcwqn")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[node name="Cherry" type="Area2D"]
+script = ExtResource("1_8nybi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_f771h")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2, 0)
+scale = Vector2(2.40476, 2.78571)
+sprite_frames = SubResource("SpriteFrames_k0n17")
+animation = &"Idle"
+frame_progress = 0.546988
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

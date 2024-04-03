@@ -1,8 +1,14 @@
 res://main.tscn
 res://world.tscn
 res://bg.tscn
-res://bg.gd
-res://Player/Player.tscn
 res://Frog.tscn
+res://Player/Player.tscn
+res://main.gd
+res://Global/Utils.gd
+res://Global/Game.gd
 res://Frog.gd
 res://Player/Player.gd
+res://Collectables/Cherry.gd
+res://Collectables/Cherry.tscn
+res://Node2D.gd
+res://Collectables.gd
